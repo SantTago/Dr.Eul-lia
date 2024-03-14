@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr.Eulalia</title>
+  <link rel="icon" href="caminho/para/seu-favicon.ico" type="image/x-icon">
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oleo+Script:wght@400;700&display=swap');
+   
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(255, 255, 255);
+    }
+
+    /* Estilos para o cabeçalho */
+    .logomarca {
+      background-color: #C00A83;
+      padding: 13px;
+      text-align: center;
+      margin-bottom: -1px;
+      display: flex;
+      /* justify-content: space-between; */
+      align-items: center;
+    }
+
+    .logomarca img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .titulo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      padding-right: 10px;
+      font-family:  "Oleo Script",Arial, Helvetica, sans-serif;
+    }
+
+    .agende {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      
+    }
+
+    /* Estilos para dispositivos móveis (largura máxima de 768px) */
+    @media only screen and (max-width: 768px) {
+      .logomarca {
+        background-color: #C00A83;
+        text-align: center;
+        margin-bottom: -1px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+      }
+
+      .titulo {
+        margin: 0 auto; /* Centraliza o título */
+        
+      }
+      .titulo {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        font-family:  "Oleo Script",Arial, Helvetica, sans-serif;
+      }
+
+      .agende {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        font-family:  "Oleo Script",Arial, Helvetica, sans-serif;
+        border-radius: 20px;
+      }
+      .agende:hover{
+        background-color: #ffeb00;
+        color: #c00a83;
+        border-radius: 20px;
+      }
+      
+
+      #video-container,
+      #curiosidades-video-container {
+        padding-bottom: 56.25%;
+      }
+
+      .sidebar {
+        width: 200px;
+      }
+
+      .open-btn {
+        display: block;
+      }
+
+      .header-menu {
+        display: none;
+      }
+
+      .menu-opened .header-menu {
+        display: block;
+      }
+    }
+
+    /* Estilos para dispositivos com largura maior que 768px (PCs e tablets) */
+    @media only screen and (min-width: 769px) {
+      #video-container,
+      #curiosidades-video-container {
+        padding-bottom: 31.25%;
+      }
+
+      .sidebar {
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+      }
+
+      .open-btn {
+        display: none;
+      }
+
+      .sidebar a {
+        padding: 16px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #818181;
+        display: block;
+      }
+
+      .sidebar a:hover {
+        color: #f1f1f1;
+      }
+
+      .header-menu {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: row;
+        align-content: space-between;
+        flex-wrap: nowrap;
+      }
+
+      .menu-opened .header-menu {
+        display: block;
+      }
+      .agende {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        font-family:  "Oleo Script",Arial, Helvetica, sans-serif;
+        border-radius: 20px;
+      }
+      .agende:hover{
+        background-color: #ffeb00;
+        color: #c00a83;
+        border-radius: 20px;
+      }
+      
+    }
+
+    /* Estilos para o ícone de seta baixo */
+    #baixo {
+      padding-bottom: 100px;
+    }
+
+   
+
+    /* Estilos para as seções de vídeo */
+    .video-section {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .video-label {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: rgb(255, 255, 255);
+    }
+
+    #video-container,
+    #curiosidades-video-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    #popup-video,
+    #curiosidades-popup-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #popup-buttons,
+    #curiosidades-popup-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    #popup-buttons button,
+    #curiosidades-popup-buttons button {
+      background-color: rgba(255, 0, 0, 0.459);
+      color: #000000;
+      padding: 5px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.3s ease-in-out;
+      margin: 0 10px;
+    }
+
+    #popup-buttons button:hover,
+    #curiosidades-popup-buttons button:hover {
+      background-color: #0077ff;
+      color: #ffffff;
+      transform: scale(1.1);
+    }
+
+    /* Estilos para a barra lateral (menu) */
+    .sidebar {
+      width: 177px;
+      height: 100%;
+      background-color: #c00a83;
+      position: fixed;
+      top: 116px;
+      left: -200px;
+      overflow-x: hidden;
+      padding-top: 20px;
+      transition: 1.0s;
+      z-index: 2;
+    }
+
+    .sidebar a {
+      padding: 16px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #ffffff;
+      display: block;
+      text-align: center;
+    }
+
+    .sidebar a:hover {
+      color: #ffeb00;
+    }
+
+    .content {
+      margin-left: 0;
+      transition: margin-left 0.5s;
+    }
+
+    /* Estilos para o ícone do menu */
+    .open-btn {
+      font-size: 30px;
+      cursor: pointer;
+      color: #ffeb00;
+      position: absolute;
+      top: 3px;
+      left: 20px;
+      z-index: 3;
+      padding: 10px;
+    }
+
+    /* Estilos para o ícone de fechar o menu */
+    .close-arrow {
+      font-size: 36px;
+      margin-left: 50px;
+      display: flex;
+    }
+
+    /* Estilos para a rolagem do sidebar */
+    #sidebar {
+      overflow-y: auto;
+      max-height: 100vh;
+    }
+
+    #sidebar::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    #sidebar::-webkit-scrollbar-thumb {
+      background-color: #0077ff;
+      border-radius: 10px;
+    }
+
+    #sidebar::-webkit-scrollbar-track {
+      background-color: #91b7da;
+    }
+
+    .header-menu > a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+    }
+    .agendar{
+      width: 50px;
+      height: 100px;
+      box-shadow: 2px 2px 15px #FFCA09;
+       
+    }
+    #botao{
+      border: 2px solid #ffeb00 ;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    
+    }
+
+    .article {
+      flex: 1;
+      padding: 20px;
+      text-align: justify;
+    }
+
+    .img {
+      flex: 1;
+      max-width: 48%;
+      height: auto;
+      padding: 15px;  
+    }
+
+    @media only screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        
+      }
+      .img {
+      flex: 1;
+      max-width: 100%;
+      height: auto;
+      padding: 0px;
+    }
+
+     .Sub{
+      font-family:  "Oleo Script",Arial, Helvetica, sans-serif;
+     }
+      
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="#" onclick="showSection('Dr.Eulalia')">Inicio</a>
+    <a href="#" onclick="showSection('Dr.Eulalia')">Contato</a>
+    <a href="#" onclick="showSection('Dr.Eulalia')">Agendamento</a>
+    <a href="#" class="close-btn" onclick="closeMenu()">&larr; Fechar</a>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="logomarca">
+    <div class="open-btn" onclick="toggleMenu()">&#9776;</div>
+    <div class="titulo">Dr.Eulalia</div>
+    <div class="agende" id="botao">Agende agora</div>
+  
+    <nav class="header-menu">
+      <a href="#" onclick="showSection('Dr.Eulalia')">Inicio</a>
+      <a href="#" onclick="showSection('Dr.Eulalia')">Contato</a>
+      <a href="#" onclick="showSection('Dr.Eulalia')">Agendamento</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+    <img src="img/perfil.jpg" alt="Imagem" class="img">
+    <div class="article">
+      <h2 class="Sub">Dr.Eulalia Angelim</h2>
+      <p>Olá, sou Eulalia Angelim, fisioterapeuta especializada em fisioterapia infantil. Minha missão é ajudar crianças a se desenvolverem com saúde e bem-estar, garantindo que alcancem todo o seu potencial. Com mais de 10 anos de experiência tratando e estimulando crianças, estou comprometida em proporcionar um cuidado personalizado e eficaz para cada pequeno paciente que atendo.</p>
+
+      <p>Acredito que cada criança é única e merece um tratamento específico para suas necessidades. Utilizo técnicas e metodologias atualizadas, sempre buscando o melhor resultado para o desenvolvimento motor, cognitivo e emocional de cada criança que acompanho.</p>
+
+      <p>Minha abordagem é pautada no carinho, na empatia e na dedicação, criando um ambiente acolhedor e seguro para que as crianças se sintam confortáveis durante as sessões de fisioterapia. Trabalho em parceria com as famílias, orientando e apoiando para que juntos possamos promover o melhor para o crescimento saudável das crianças.</p>
+
+      <p>Se você busca um profissional comprometido, experiente e apaixonado por cuidar das crianças, estou aqui para ajudar. Vamos juntos garantir o melhor para o desenvolvimento e a qualidade de vida dos pequenos!</p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    var menuAberto = false;
+
+    function toggleMenu() {
+      var sidebar = document.getElementById('sidebar');
+
+      if (!menuAberto) {
+        sidebar.style.left = '0px';
+        menuAberto = true;
+      } else {
+        sidebar.style.left = '-200px';
+        menuAberto = false;
+      }
+    }
+
+    function closeMenu() {
+      var sidebar = document.getElementById('sidebar');
+      sidebar.style.left = '-200px';
+      menuAberto = false;
+    }
+
+    document.addEventListener('click', function (event) {
+      var sidebar = document.getElementById('sidebar');
+      if (!event.target.closest('.open-btn') && !event.target.closest('.sidebar')) {
+        sidebar.style.left = '-200px';
+        menuAberto = false;
+      }
+    });
+
+    function adquirirCurso(curso) {
+      alert('Curso adquirido: ' + curso);
+      // Adicione a lógica real aqui, como redirecionar para uma página de pagamento, etc.
+    }
+
+    // Adiciona evento de clique ao ícone do menu para mostrar as opções no modo PC
+    var openBtn = document.querySelector('.open-btn');
+    var headerMenu = document.querySelector('.header-menu');
+
+    openBtn.addEventListener('click', function() {
+      headerMenu.classList.toggle('menu-opened');
+    });
+  </script>
+</body>
+</html>
