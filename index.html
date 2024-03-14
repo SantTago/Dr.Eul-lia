@@ -116,6 +116,16 @@
 
     /* Estilos para dispositivos com largura maior que 768px (PCs e tablets) */
     @media only screen and (min-width: 769px) {
+      .container1 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+      }
+      .profissao{
+      
+        display: none;
+      }
+
       #video-container,
       #curiosidades-video-container {
         padding-bottom: 31.25%;
@@ -333,6 +343,7 @@
       justify-content: space-between;
     
     }
+    
 
     .article {
       flex: 1;
@@ -363,8 +374,16 @@
      .Sub{
       font-family:  "Oleo Script",Arial, Helvetica, sans-serif;
      }
+     
+     .profissao{
+      color: white;
+      margin-top: -15px;
+      color: white;
+      font-size: small;
       
     }
+    }
+    
   </style>
 </head>
 <body>
@@ -374,6 +393,7 @@
     <a href="#" onclick="showSection('Dr.Eulalia')">Inicio</a>
     <a href="#" onclick="showSection('Dr.Eulalia')">Contato</a>
     <a href="#" onclick="showSection('Dr.Eulalia')">Agendamento</a>
+    <a href="#" onclick="showSection('Dr.Eulalia')">Serviços</a>
     <a href="#" class="close-btn" onclick="closeMenu()">&larr; Fechar</a>
   </div>
 
@@ -381,18 +401,20 @@
   <header class="logomarca">
     <div class="open-btn" onclick="toggleMenu()">&#9776;</div>
     <div class="titulo">Dr.Eulalia</div>
+    <p class="profissao">Fisioterapeuta</p>
     <div class="agende" id="botao">Agende agora</div>
   
     <nav class="header-menu">
       <a href="#" onclick="showSection('Dr.Eulalia')">Inicio</a>
       <a href="#" onclick="showSection('Dr.Eulalia')">Contato</a>
       <a href="#" onclick="showSection('Dr.Eulalia')">Agendamento</a>
+      <a href="#" onclick="showSection('Dr.Eulalia')">Serviços</a>
     </nav>
   </header>
 
   <!-- Conteúdo principal -->
   <div class="container">
-    <img src="img/perfil.jpg" alt="Imagem" class="img">
+    <img src="img/perfil.jpeg" alt="Imagem" class="img">
     <div class="article">
       <h2 class="Sub">Dr.Eulalia Angelim</h2>
       <p>Olá, sou Eulalia Angelim, fisioterapeuta especializada em fisioterapia infantil. Minha missão é ajudar crianças a se desenvolverem com saúde e bem-estar, garantindo que alcancem todo o seu potencial. Com mais de 10 anos de experiência tratando e estimulando crianças, estou comprometida em proporcionar um cuidado personalizado e eficaz para cada pequeno paciente que atendo.</p>
@@ -404,6 +426,48 @@
       <p>Se você busca um profissional comprometido, experiente e apaixonado por cuidar das crianças, estou aqui para ajudar. Vamos juntos garantir o melhor para o desenvolvimento e a qualidade de vida dos pequenos!</p>
     </div>
   </div>
+  <!------------------------------------------------------------->
+  <section class="imagem" id="img01">
+    
+</section>
+
+<style>
+
+  section#img01{
+    background-image: url(img/img1.jpeg);
+    background-position: center;
+    height: 300px;
+    font-size: 40px;
+}
+
+  section.imagem{
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.562);
+    background-size: cover;
+    background-attachment: fixed;
+}
+section.imagem > p {
+    display: inline-block;
+   
+    text-shadow: 1px 1px 0px black;
+    
+}
+</style>
+  <!--------------------------------------------------------------->
+  <div class="container1">
+    <img src="img/001.jpg" alt="Imagem" class="img">
+    <div class="article">
+      <h2 class="Sub">Dr.Eulalia Angelim</h2>
+      <p>Olá, sou Eulalia Angelim, fisioterapeuta especializada em fisioterapia infantil. Minha missão é ajudar crianças a se desenvolverem com saúde e bem-estar, garantindo que alcancem todo o seu potencial. Com mais de 10 anos de experiência tratando e estimulando crianças, estou comprometida em proporcionar um cuidado personalizado e eficaz para cada pequeno paciente que atendo.</p>
+
+      <p>Acredito que cada criança é única e merece um tratamento específico para suas necessidades. Utilizo técnicas e metodologias atualizadas, sempre buscando o melhor resultado para o desenvolvimento motor, cognitivo e emocional de cada criança que acompanho.</p>
+
+      <p>Minha abordagem é pautada no carinho, na empatia e na dedicação, criando um ambiente acolhedor e seguro para que as crianças se sintam confortáveis durante as sessões de fisioterapia. Trabalho em parceria com as famílias, orientando e apoiando para que juntos possamos promover o melhor para o crescimento saudável das crianças.</p>
+
+      <p>Se você busca um profissional comprometido, experiente e apaixonado por cuidar das crianças, estou aqui para ajudar. Vamos juntos garantir o melhor para o desenvolvimento e a qualidade de vida dos pequenos!</p>
+    </div>
+  </div>
+  <!--------------------------------------------------------------->
 
   <!-- JavaScript -->
   <script>
