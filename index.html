@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr.Eulalia</title>
   <link rel="icon" href="caminho/para/seu-favicon.ico" type="image/x-icon">
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+    
   <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oleo+Script:wght@400;700&display=swap');
@@ -257,7 +266,7 @@
       height: 100%;
       background-color: #c00a83;
       position: fixed;
-      top: 116px;
+      top: 138px;
       left: -200px;
       overflow-x: hidden;
       padding-top: 20px;
@@ -452,23 +461,215 @@ section.imagem > p {
     text-shadow: 1px 1px 0px black;
     
 }
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 80%px;
+  height: 80%;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 10px;
+  margin-top: 0px;
+  flex: 1 0 calc(50% - 20px); /* Inicialmente, duas colunas por linha com margens de 10px */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+#map {
+  height: 400px; /* Defina a altura desejada para o mapa */
+  width: 100%; /* Ocupar toda a largura do contêiner pai */
+}
+
 </style>
+
   <!--------------------------------------------------------------->
   <div class="container1">
     <img src="img/001.jpg" alt="Imagem" class="img">
     <div class="article">
-      <h2 class="Sub">Dr.Eulalia Angelim</h2>
-      <p>Olá, sou Eulalia Angelim, fisioterapeuta especializada em fisioterapia infantil. Minha missão é ajudar crianças a se desenvolverem com saúde e bem-estar, garantindo que alcancem todo o seu potencial. Com mais de 10 anos de experiência tratando e estimulando crianças, estou comprometida em proporcionar um cuidado personalizado e eficaz para cada pequeno paciente que atendo.</p>
-
-      <p>Acredito que cada criança é única e merece um tratamento específico para suas necessidades. Utilizo técnicas e metodologias atualizadas, sempre buscando o melhor resultado para o desenvolvimento motor, cognitivo e emocional de cada criança que acompanho.</p>
-
-      <p>Minha abordagem é pautada no carinho, na empatia e na dedicação, criando um ambiente acolhedor e seguro para que as crianças se sintam confortáveis durante as sessões de fisioterapia. Trabalho em parceria com as famílias, orientando e apoiando para que juntos possamos promover o melhor para o crescimento saudável das crianças.</p>
-
-      <p>Se você busca um profissional comprometido, experiente e apaixonado por cuidar das crianças, estou aqui para ajudar. Vamos juntos garantir o melhor para o desenvolvimento e a qualidade de vida dos pequenos!</p>
+      <p>
+        Fisioterapeuta infantil, e quero destacar a importância dos cuidados dos pais no desenvolvimento motor de seus filhos desde os primeiros meses de vida. É essencial que os pais estejam atentos aos marcos do desenvolvimento, como virar de cabeça, rotação dos membros e controle postural, buscando sempre estimular e apoiar essas habilidades. <br>
+        <br>
+        
+        Além disso, é fundamental contar com a orientação de um fisioterapeuta qualificado para avaliar possíveis alterações ou atrasos no desenvolvimento motor da criança. O profissional pode oferecer orientações específicas para estimular o desenvolvimento motor através de brincadeiras e exercícios adequados, garantindo um crescimento saudável e feliz para os pequenos. <br>
+        <br>
+        
+        Portanto, papais, lembrem-se da importância de cuidar do desenvolvimento motor de seus filhos e de buscar a orientação de um fisioterapeuta infantil qualificado, como eu, Dra. Eulália. Juntos, podemos garantir o melhor para o futuro das nossas crianças. <br>
+        <br>
+      </p>
     </div>
   </div>
-  <!--------------------------------------------------------------->
 
+  <hr>
+  <!--------------------------------------------------------------->
+  
+  <section class="slider">
+    <div class="product">
+      <img src="img/002.jpeg" alt="bebe">
+    </div>
+
+    <div class="product">
+      <img src="img/003.jpeg" alt="bebe">
+    </div>
+
+    <div class="product">
+      <img src="img/004.jpeg" alt="bebe">
+    </div>
+
+    <div class="product">
+      <img src="img/005.jpeg" alt="bebe">  
+    </div>
+
+    <div class="product">
+      <img src="img/006.jpeg" alt="bebe"> 
+    </div>
+   
+  </section>
+
+  
+
+
+  <!-- Adicione este script após a tag <body> -->
+<script>
+  $(document).ready(function(){
+    const slider = $('.slider');
+
+    slider.slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: '<button class="slick-prev">Anterior</button>',
+        nextArrow: '<button class="slick-next">Próximo</button>',
+        autoplay: true, // Ativar o autoplay
+        autoplaySpeed: 2000, // Intervalo de tempo em milissegundos (2 segundos)
+
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    // Parar o autoplay ao clicar em uma imagem
+    slider.on('click', '.slick-slide', function() {
+        slider.slick('slickPause'); // Parar o carrossel
+        setTimeout(function() {
+            slider.slick('slickPlay'); // Retomar o carrossel após 5 segundos
+        }, 5000); // Tempo em milissegundos (5 segundos)
+    });
+});
+
+</script>
+  <hr>
+
+  <!--------------------------------------------------->
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .info-container {
+      background-color: #3498db;
+      padding: 48px;
+      color: #fff;
+      flex: -1;
+    }
+
+    .info-container h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .info-container p {
+      margin: 10px 0;
+    }
+
+    .contact-form {
+      background-color: #f2f2f2; /* Cor de fundo cinza claro */
+      padding: 20px;
+      margin-left: 20px;
+      flex: 1;
+    }
+
+    .contact-form h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .contact-form input[type="submit"] {
+      background-color: #3498db; /* Cor de fundo azul */
+      color: #fff; /* Cor do texto */
+      border: none;
+      cursor: pointer;
+    }
+
+    .contact-form input[type="submit"]:hover {
+      background-color: #2980b9; /* Cor de fundo azul mais escuro no hover */
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .contact-form {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="info-container">
+      <h2>Contato</h2>
+      <p><strong>Endereço:</strong> Rua Riachuelo, 1668, Centro<br>
+      Clinica Centro Médico de Camocim<br>
+      Em frente a multiclinica<br>
+      Próximo ao posto Siena II</p>
+      <p><strong>Telefone:</strong> 88992901543</p>
+    </div>
+
+    <div class="contact-form">
+      <h2>Envie sua mensagem</h2>
+      <form action="mailto:mocobom09@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="Nome" placeholder="Nome" required><br>
+        <input type="email" name="Email" placeholder="Email" required><br>
+        <input type="text" name="Assunto" placeholder="Assunto" required><br>
+        <textarea name="Mensagem" placeholder="Mensagem" rows="4" required></textarea><br>
+        <input type="submit" value="Enviar">
+      </form>
+    </div>
+  </div>
+  <!--------------------------------------------------->
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127510.57928998859!2d-40.92992596926825!3d-2.900904005038739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ebdb8021008ef9%3A0xb3d7b1a25595a20a!2sCentro%20M%C3%A9dico%20de%20Camocim!5e0!3m2!1spt-BR!2sbr!4v1710468985124!5m2!1spt-BR!2sbr" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!---------------------------------------------------------------->
   <!-- JavaScript -->
   <script>
     var menuAberto = false;
