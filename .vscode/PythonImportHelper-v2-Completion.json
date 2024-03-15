@@ -1,0 +1,36 @@
+[
+    {
+        "label": "YouTube",
+        "importPath": "pytube",
+        "description": "pytube",
+        "isExtraImport": true,
+        "detail": "pytube",
+        "documentation": {}
+    },
+    {
+        "label": "AudioFileClip",
+        "importPath": "moviepy.editor",
+        "description": "moviepy.editor",
+        "isExtraImport": true,
+        "detail": "moviepy.editor",
+        "documentation": {}
+    },
+    {
+        "label": "download_and_convert_audio",
+        "kind": 2,
+        "importPath": "baixar audio",
+        "description": "baixar audio",
+        "peekOfCode": "def download_and_convert_audio(url):\n    try:\n        # Criar um objeto YouTube com base no link\n        yt = YouTube(url)\n        # Selecionar a melhor qualidade de áudio disponível\n        audio_stream = yt.streams.filter(only_audio=True).first()\n        # Baixar o arquivo de áudio\n        audio_path = audio_stream.download(output_path='.', filename='audio')\n        # Carregar o arquivo de áudio baixado\n        audio_clip = AudioFileClip(audio_path)",
+        "detail": "baixar audio",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "baixar audio",
+        "description": "baixar audio",
+        "peekOfCode": "url = 'https://youtu.be/yqp_8uqpU2k?si=B1YbBJJuiDgVXVB7'\n# Chamada da função para baixar e converter o áudio\ndownload_and_convert_audio(url)",
+        "detail": "baixar audio",
+        "documentation": {}
+    }
+]

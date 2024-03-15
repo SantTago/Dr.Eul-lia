@@ -24,6 +24,7 @@
       margin: 0;
       padding: 0;
       background-color: rgb(255, 255, 255);
+      overflow-x: hidden;
     }
 
     /* Estilos para o cabeçalho */
@@ -38,7 +39,7 @@
     }
 
     .logomarca img {
-      max-width: 100%;
+      max-width: 41%;
       height: auto;
     }
 
@@ -191,8 +192,13 @@
       }
       
     }
+    header{
+      background-image: url(img/agua.png);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-position-y: bottom;
+    }
 
-    /* Estilos para o ícone de seta baixo */
     #baixo {
       padding-bottom: 100px;
     }
@@ -266,7 +272,7 @@
       height: 100%;
       background-color: #c00a83;
       position: fixed;
-      top: 138px;
+      top: 165px;
       left: -200px;
       overflow-x: hidden;
       padding-top: 20px;
@@ -374,11 +380,11 @@
         
       }
       .img {
-      flex: 1;
-      max-width: 100%;
-      height: auto;
-      padding: 0px;
-    }
+        flex: 1;
+        max-width: 95%;
+        height: auto;
+        padding: 15px;  
+      }
 
      .Sub{
       font-family:  "Oleo Script",Arial, Helvetica, sans-serif;
@@ -391,6 +397,19 @@
       font-size: small;
       
     }
+    .agua{
+      position: absolute;
+      left: 246px;
+     
+  
+    }
+    
+    }
+    .agua > img{
+      position: absolute;
+      max-width: 50%;
+     
+  
     }
     
   </style>
@@ -409,8 +428,11 @@
   <!-- Cabeçalho -->
   <header class="logomarca">
     <div class="open-btn" onclick="toggleMenu()">&#9776;</div>
-    <div class="titulo">Dr.Eulalia</div>
-    <p class="profissao">Fisioterapeuta</p>
+    <div class="titulo">
+      <img src="img/header.png" alt="Eulalia">
+    </div>
+
+
     <div class="agende" id="botao">Agende agora</div>
   
     <nav class="header-menu">
@@ -486,7 +508,7 @@ img {
   max-width: 100%;
   height: auto;
   width: 100%;
-  border: 1px solid #ddd;
+ 
 }
 
 #map {
