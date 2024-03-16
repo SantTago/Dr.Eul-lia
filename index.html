@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Dr.Eulalia</title>
   <link rel="icon" href="caminho/para/seu-favicon.ico" type="image/x-icon">
 
@@ -27,7 +27,8 @@
       margin: 0;
       padding: 0;
       background-color: rgb(255, 255, 255);
-      overflow-x: hidden;
+      overflow-x: clip; /* Evita a rolagem lateral */
+    
     }
 
     /* Estilos para o cabeçalho */
@@ -431,7 +432,6 @@
     <a href="#" onclick="showSection('Dr.Eulalia')">Serviços</a>
     <a href="#" class="close-btn" onclick="closeMenu()">&larr; Fechar</a>
   </div>
-
   <!-- Cabeçalho -->
   <header class="logomarca">
     <div class="open-btn" onclick="toggleMenu()">&#9776;</div>
@@ -731,11 +731,6 @@ img {
       }
     });
 
-    function adquirirCurso(curso) {
-      alert('Curso adquirido: ' + curso);
-      // Adicione a lógica real aqui, como redirecionar para uma página de pagamento, etc.
-    }
-
     // Adiciona evento de clique ao ícone do menu para mostrar as opções no modo PC
     var openBtn = document.querySelector('.open-btn');
     var headerMenu = document.querySelector('.header-menu');
@@ -744,7 +739,6 @@ img {
       headerMenu.classList.toggle('menu-opened');
     });
   </script>
-
   <!------------------------------------------------------------------>
   <style>
     section {
@@ -853,10 +847,10 @@ img {
  
   <section class="bloco-noticias">
     <div class="video-container">
-        <video id="meuVideo" muted loop>
-            <source src="midia/Eulalia.mp4" type="video/mp4">
-            Seu navegador não suporta o elemento video.
-        </video>
+      <video id="meuVideo" loop>
+        <source src="midia/Eulalia.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento video.
+    </video>
        
     </div>
     <div class="content">
