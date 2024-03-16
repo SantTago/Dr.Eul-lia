@@ -17,7 +17,10 @@
   <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oleo+Script:wght@400;700&display=swap');
-   
+   *{
+    margin: 0px;
+    padding: 0px;
+   }
 
     body {
       font-family: Arial, sans-serif;
@@ -36,6 +39,7 @@
       display: flex;
       /* justify-content: space-between; */
       align-items: center;
+
     }
 
     .logomarca img {
@@ -411,7 +415,10 @@
      
   
     }
-    
+    .linha-horizontal {
+      border: none;
+      border-top: 2px solid #2EB3FF;
+  }
   </style>
 </head>
 <body>
@@ -447,12 +454,13 @@
   <div class="container">
     <img src="img/perfil.jpeg" alt="Imagem" class="img">
     <div class="article">
-      <h2 class="Sub">Dr.Eulalia Angelim</h2>
-      <p>Olá, sou Eulalia Angelim, fisioterapeuta especializada em fisioterapia infantil. Minha missão é ajudar crianças a se desenvolverem com saúde e bem-estar, garantindo que alcancem todo o seu potencial. Com mais de 10 anos de experiência tratando e estimulando crianças, estou comprometida em proporcionar um cuidado personalizado e eficaz para cada pequeno paciente que atendo.</p>
-
-      <p>Acredito que cada criança é única e merece um tratamento específico para suas necessidades. Utilizo técnicas e metodologias atualizadas, sempre buscando o melhor resultado para o desenvolvimento motor, cognitivo e emocional de cada criança que acompanho.</p>
-
-      <p>Minha abordagem é pautada no carinho, na empatia e na dedicação, criando um ambiente acolhedor e seguro para que as crianças se sintam confortáveis durante as sessões de fisioterapia. Trabalho em parceria com as famílias, orientando e apoiando para que juntos possamos promover o melhor para o crescimento saudável das crianças.</p>
+      <h2 class="Sub">Dr.Eulalia Angelim</h2> <br>
+      <p>Olá, sou Eulalia Angelim, fisioterapeuta especializada em fisioterapia infantil. Minha missão é ajudar crianças a se desenvolverem com saúde e bem-estar, garantindo que alcancem todo o seu potencial. Com mais de 10 anos de experiência tratando e estimulando crianças, estou comprometida em proporcionar um cuidado personalizado e eficaz para cada pequeno paciente que atendo.</p> <br>
+      <br>
+      <p>Acredito que cada criança é única e merece um tratamento específico para suas necessidades. Utilizo técnicas e metodologias atualizadas, sempre buscando o melhor resultado para o desenvolvimento motor, cognitivo e emocional de cada criança que acompanho.</p> <br>
+      <br>
+      <p>Minha abordagem é pautada no carinho, na empatia e na dedicação, criando um ambiente acolhedor e seguro para que as crianças se sintam confortáveis durante as sessões de fisioterapia. Trabalho em parceria com as famílias, orientando e apoiando para que juntos possamos promover o melhor para o crescimento saudável das crianças.</p> <br>
+      <br>
 
       <p>Se você busca um profissional comprometido, experiente e apaixonado por cuidar das crianças, estou aqui para ajudar. Vamos juntos garantir o melhor para o desenvolvimento e a qualidade de vida dos pequenos!</p>
     </div>
@@ -488,7 +496,6 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 20px;
   box-sizing: border-box;
   max-width: 80%px;
   height: 80%;
@@ -535,7 +542,8 @@ img {
     </div>
   </div>
 
-  <hr>
+  <hr class="linha-horizontal">
+
   <!--------------------------------------------------------------->
   
   <section class="slider">
@@ -597,7 +605,8 @@ img {
 });
 
 </script>
-  <hr>
+<hr class="linha-horizontal">
+
 
   <!--------------------------------------------------->
   <style>
@@ -744,16 +753,11 @@ img {
       padding: 50px 0;
   }
 
-  img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+
 
   .reserve-button {
       position: absolute;
-      top: 68%;
+      top: 58%;
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 10px 20px;
@@ -840,8 +844,125 @@ img {
     height: 400px; /* Defina a altura desejada para o mapa */
     width: 100%; /* Ocupar toda a largura do contêiner pai */
   }
-  
+  .dica{
+    padding: 20px;
+    text-align: center;
+  }
   </style>
+  <!------------------------------------------------------------------>
+ 
+  <section class="bloco-noticias">
+    <div class="video-container">
+        <video id="meuVideo" muted loop>
+            <source src="midia/Eulalia.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento video.
+        </video>
+       
+    </div>
+    <div class="content">
+        <h2 class="dica" >Como a fisioterapia pode ajudar seu filho quando ele está gripado ou resfriado</h2> <br>
+        <p class="description ellipsis" ></p>
+        <p class="full-text" style="padding: 20px;">
+            A fisioterapia respiratória é uma aliada importante no tratamento de crianças com gripes ou resfriados. Ela ajuda a melhorar a ventilação pulmonar, remover secreções e aliviar os sintomas respiratórios.<br>
+            <br>
+            Os exercícios respiratórios e técnicas de fisioterapia podem facilitar a respiração, prevenir complicações como pneumonias e contribuir para a recuperação mais rápida e confortável da criança.<br>
+            <br>
+            Consulte um fisioterapeuta especializado para saber mais sobre como a fisioterapia pode beneficiar seu filho durante episódios de gripe ou resfriado.
+        </p>
+    </div>
+</section>
+
+<script>
+    const meuVideo = document.getElementById('meuVideo');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                meuVideo.play();
+            } else {
+                meuVideo.pause();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(meuVideo);
+</script>
+
+<style>
+
+.bloco-noticias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container {
+  max-width: 50%;
+  margin-right: -167px;
+  overflow: hidden;
+}
+
+video {
+  width: 97%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  max-width: 50%;
+  text-align: justify;
+}
+
+.reserve-button {
+  /* display: block; */
+  /* margin-top: 20px; */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  /* border: none; */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 1.3s ease;
+}
+
+.reserve-button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .bloco-noticias {
+      flex-direction: column;
+  }
+
+  .video-container,
+  .content {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  video {
+      width: 100%;
+      height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+      max-width: 50%;
+      text-align: justify;
+      margin-left: 200px; /* Ajusta o texto para a direita */
+      margin-top: 20px; /* Adiciona um espaço entre o vídeo e o texto */
+  }
+
+  video {
+      width: 215px;
+      height: auto;
+  }
+}
+</style>
+
   <!------------------------------------------------------------------>
 </body>
 </html>
