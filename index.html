@@ -224,7 +224,6 @@
     #curiosidades-video-container {
       position: relative;
       width: 100%;
-      max-width: 800px;
       margin: 0 auto;
       overflow: hidden;
     }
@@ -736,5 +735,113 @@ img {
       headerMenu.classList.toggle('menu-opened');
     });
   </script>
+
+  <!------------------------------------------------------------------>
+  <style>
+    section {
+      position: relative;
+      text-align: center;
+      padding: 50px 0;
+  }
+
+  img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .reserve-button {
+      position: absolute;
+      top: 68%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .reserve-button:hover {
+      background-color: #0056b3;
+  }
+  .title {
+    position: absolute;
+    background-color: #6495ed57;
+    font-size: 28px;
+    color: #ffffff;
+    font-family: 'Oleo Script';
+    box-shadow: 2px 2px 15px blanchedalmond;
+    padding: 60px 35px 100px 35px;
+    top: 38px;
+    border-radius: 79px 0px;
+}
+
+</style>
+
+  <section class="imagem" id="img02">
+    <h2 class="title">Agende já!</h2>
+    <button class="reserve-button" onclick="window.location.href = '#';">Faça sua reserva</button>
+  </section>
+  
+  <style>
+  
+    section#img02{
+      background-image: url(https://lh3.googleusercontent.com/pw/AP1GczO3kKBCsF2Pvm25YjKty7XbYgtTnJVse2LMNMNhF6sMSF8WZpNysZ-im0uctZ7zJw9lZAugHpOhFeu5Vj8j3bAaApPGB44j_N2Fj70URCcWOXOu7DtGqGbjCXcPLKX0GPx_5sd90m4mqEgteSydxOmi=w911-h607-s-no-gm?authuser=0);
+      background-position: center;
+      height: 300px;
+      font-size: 40px;
+  }
+  
+    section.imagem{
+      color: white;
+      box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.562);
+      background-size: cover;
+      background-attachment: fixed;
+  }
+  section.imagem > p {
+      display: inline-block;
+     
+      text-shadow: 1px 1px 0px black;
+      
+  }
+  
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 80%px;
+    height: 80%;
+  }
+  
+  .product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    margin-top: 0px;
+    flex: 1 0 calc(50% - 20px); /* Inicialmente, duas colunas por linha com margens de 10px */
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+   
+  }
+  
+  #map {
+    height: 400px; /* Defina a altura desejada para o mapa */
+    width: 100%; /* Ocupar toda a largura do contêiner pai */
+  }
+  
+  </style>
+  <!------------------------------------------------------------------>
 </body>
 </html>
