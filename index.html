@@ -418,7 +418,8 @@
     }
     .linha-horizontal {
       border: none;
-      border-top: 2px solid #2EB3FF;
+      border-top: 5px solid #FFCA09;
+     
   }
   </style>
 </head>
@@ -466,31 +467,37 @@
     </div>
   </div>
   <!------------------------------------------------------------->
-  <section class="imagem" id="img01">
-    
-</section>
-
+ 
+<picture class="midia">
+  <source media="(max-width: 600px)" srcset="img/img1.jpeg" type="image/png">
+  <img src="img/img001.jpg" alt="image flexivel">
+</picture>
 <style>
 
-  section#img01{
+  /*section#img01{
     background-image: url(img/img1.jpeg);
     background-position: center;
     height: 50vh;
     font-size: 40px;
 }
+*/
+/* Estilos para PCs */
+@media (min-width: 768px) {
+  section.imagem {
+      background-image: url('img/img1_large.jpeg'); /* Imagem maior para PCs */
+      height: 50vh; /* Altura para PCs */
+  }
+}
 
-  section.imagem{
-    color: white;
-    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.562);
-    background-size: cover;
-    background-attachment: fixed;
+/* Estilos para dispositivos móveis */
+@media (max-width: 767px) {
+  section.imagem {
+      background-image: url('img/img1_small.jpeg'); /* Imagem menor para dispositivos móveis */
+      height: 30vh; /* Altura para dispositivos móveis */
+  }
 }
-section.imagem > p {
-    display: inline-block;
-   
-    text-shadow: 1px 1px 0px black;
-    
-}
+ 
+
 section#img01 .title {
   position: absolute;
   top: 20px; /* Posiciona o título no topo da seção */
@@ -559,6 +566,7 @@ img {
   <!--------------------------------------------------------------->
   <div class="container1">
     <img src="img/001.jpg" alt="Imagem" class="img">
+   
     <div class="article">
       <p>
         Fisioterapeuta infantil, e quero destacar a importância dos cuidados dos pais no desenvolvimento motor de seus filhos desde os primeiros meses de vida. É essencial que os pais estejam atentos aos marcos do desenvolvimento, como virar de cabeça, rotação dos membros e controle postural, buscando sempre estimular e apoiar essas habilidades. <br>
@@ -775,7 +783,7 @@ img {
     section {
       position: relative;
       text-align: center;
-      padding: 50px 0;
+      
   }
 
 
@@ -845,25 +853,27 @@ img {
 }
 
 </style>
-
-  <section class="imagem" id="img02">
-    <h2 class="title">Agende já!</h2>
-    <button class="reserve-button" onclick="window.location.href = '#';">Faça sua reserva</button>
-  </section>
+  <hr class="linha-horizontal">
+  <picture class="midia">
+    <source media="(max-width: 600px)" srcset="img/img.jpg" type="image/png">
+    <img src="img/img002.jpg" alt="image flexivel">
+    
+  </picture>
   
+  <hr class="linha-horizontal">
   <style>
     
   
-    section#img02 {
+   /* section#img02 {
       background-image: url(img/img2.jpg);
       background-position: center;
-      background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a área */
+      background-size: cover; 
       background-attachment: fixed;
       height: 50vh;
       font-size: 40px;
-      position: relative; /* Adiciona posição relativa para que os elementos filhos possam ser posicionados de forma absoluta */
-    }
-  
+      position: relative;
+      }
+    */
     section.imagem{
       color: white;
       box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.562);
@@ -881,9 +891,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px;
     box-sizing: border-box;
-    max-width: 80%px;
     height: 80%;
   }
   

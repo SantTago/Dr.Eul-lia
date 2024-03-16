@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Dr.Eulalia</title>
+  <link rel="icon" href="caminho/para/seu-favicon.ico" type="image/x-icon">
+
+  <!-- Adicione seus estilos CSS aqui -->
+  <style>
+    /* Estilos para a seção de contato */
+    .contact-container {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .contact-container h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-container form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .contact-container textarea {
+      height: 150px; /* Defina a altura desejada para o campo de mensagem */
+    }
+
+    .contact-container button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-container button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Seção de contato -->
+  <section class="contact-container">
+    <h2>Entre em contato</h2>
+    <form action="mailto:seu-email@aqui.com" method="post" enctype="text/plain">
+      <input type="text" name="Nome" placeholder="Seu nome" required>
+      <input type="email" name="Email" placeholder="Seu e-mail" required>
+      <input type="text" name="Assunto" placeholder="Assunto" required>
+      <textarea name="Mensagem" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+</body>
+</html>
