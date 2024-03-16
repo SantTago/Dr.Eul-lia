@@ -491,6 +491,37 @@ section.imagem > p {
     text-shadow: 1px 1px 0px black;
     
 }
+section#img01 .title {
+  position: absolute;
+  top: 20px; /* Posiciona o título no topo da seção */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(100, 149, 237, 0.34); /* Adapte a cor de fundo conforme desejado */
+  font-size: 28px;
+  color: #ffffff;
+  font-family: 'Oleo Script';
+  box-shadow: 2px 2px 15px blanchedalmond;
+  padding: 20px 35px; /* Ajuste o espaçamento interno conforme necessário */
+  border-radius: 79px 0px;
+}
+
+section#img01 .reserve-button {
+  position: absolute;
+  top: 50%; /* Posiciona o botão no meio da seção */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+section#img01 .reserve-button:hover {
+  background-color: #0056b3;
+}
 
 section {
   display: flex;
@@ -749,33 +780,68 @@ img {
 
 
 
-  .reserve-button {
-      position: absolute;
-      top: 58%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-  }
-
-  .reserve-button:hover {
-      background-color: #0056b3;
-  }
-  .title {
+  section#img02 > h2 {
     position: absolute;
-    background-color: #6495ed57;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(100, 149, 237, 0.34);
     font-size: 28px;
     color: #ffffff;
     font-family: 'Oleo Script';
     box-shadow: 2px 2px 15px blanchedalmond;
-    padding: 60px 35px 100px 35px;
-    top: 38px;
-    border-radius: 79px 0px;
+    padding: 76px 99px;
+    border-radius: 120px 0px;
+    top: 50px;
+
+  }
+  
+  section#img02 .reserve-button {
+    position: absolute;
+    top: 89%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  section#img02 .reserve-button:hover {
+    background-color: #0056b3;
+  }
+
+@media only screen and (max-width: 771px) {
+  section#img02 .title {
+    top: 59px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(100, 149, 237, 0.34);
+    font-size: 45px;
+    color: #ffffff;
+    font-family: 'Oleo Script';
+    box-shadow: 2px 2px 15px blanchedalmond;
+    padding: 6px 89px;
+    border-radius: 125px 0px;
+    /* border: 77px; */
+}
+  section#img02 .reserve-button {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
 }
 
 </style>
@@ -786,13 +852,17 @@ img {
   </section>
   
   <style>
+    
   
-    section#img02{
+    section#img02 {
       background-image: url(https://lh3.googleusercontent.com/pw/AP1GczO3kKBCsF2Pvm25YjKty7XbYgtTnJVse2LMNMNhF6sMSF8WZpNysZ-im0uctZ7zJw9lZAugHpOhFeu5Vj8j3bAaApPGB44j_N2Fj70URCcWOXOu7DtGqGbjCXcPLKX0GPx_5sd90m4mqEgteSydxOmi=w911-h607-s-no-gm?authuser=0);
       background-position: center;
+      background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a área */
+      background-attachment: fixed;
       height: 300px;
       font-size: 40px;
-  }
+      position: relative; /* Adiciona posição relativa para que os elementos filhos possam ser posicionados de forma absoluta */
+    }
   
     section.imagem{
       color: white;
@@ -842,120 +912,118 @@ img {
     padding: 20px;
     text-align: center;
   }
+
+  
   </style>
   <!------------------------------------------------------------------>
  
   <section class="bloco-noticias">
     <div class="video-container">
-      <video id="meuVideo" loop>
+      <video id="meuVideo" playsinline loop controls>
         <source src="midia/Eulalia.mp4" type="video/mp4">
         Seu navegador não suporta o elemento video.
-    </video>
-       
+      </video>
     </div>
     <div class="content">
-        <h2 class="dica" >Como a fisioterapia pode ajudar seu filho quando ele está gripado ou resfriado</h2> <br>
-        <p class="description ellipsis" ></p>
-        <p class="full-text" style="padding: 20px;">
-            A fisioterapia respiratória é uma aliada importante no tratamento de crianças com gripes ou resfriados. Ela ajuda a melhorar a ventilação pulmonar, remover secreções e aliviar os sintomas respiratórios.<br>
-            <br>
-            Os exercícios respiratórios e técnicas de fisioterapia podem facilitar a respiração, prevenir complicações como pneumonias e contribuir para a recuperação mais rápida e confortável da criança.<br>
-            <br>
-            Consulte um fisioterapeuta especializado para saber mais sobre como a fisioterapia pode beneficiar seu filho durante episódios de gripe ou resfriado.
-        </p>
+      <h2 class="dica">Como a fisioterapia pode ajudar seu filho quando ele está gripado ou resfriado</h2> <br>
+      <p class="description ellipsis"></p>
+      <p class="full-text" style="padding: 20px;">
+        A fisioterapia respiratória é uma aliada importante no tratamento de crianças com gripes ou resfriados. Ela ajuda a melhorar a ventilação pulmonar, remover secreções e aliviar os sintomas respiratórios.<br>
+        <br>
+        Os exercícios respiratórios e técnicas de fisioterapia podem facilitar a respiração, prevenir complicações como pneumonias e contribuir para a recuperação mais rápida e confortável da criança.<br>
+        <br>
+        Consulte um fisioterapeuta especializado para saber mais sobre como a fisioterapia pode beneficiar seu filho durante episódios de gripe ou resfriado.
+      </p>
     </div>
-</section>
-
-<script>
+  </section>
+  
+  <script>
     const meuVideo = document.getElementById('meuVideo');
-
+  
     const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                meuVideo.play();
-            } else {
-                meuVideo.pause();
-            }
-        });
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          meuVideo.play();
+        } else {
+          meuVideo.pause();
+        }
+      });
     }, { threshold: 0.5 });
-
+  
     observer.observe(meuVideo);
-</script>
-
-<style>
-
-.bloco-noticias {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.video-container {
-  max-width: 50%;
-  margin-right: -167px;
-  overflow: hidden;
-}
-
-video {
-  width: 97%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.content {
-  max-width: 50%;
-  text-align: justify;
-}
-
-.reserve-button {
-  /* display: block; */
-  /* margin-top: 20px; */
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  /* border: none; */
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 1.3s ease;
-}
-
-.reserve-button:hover {
-  background-color: #0056b3;
-}
-
-@media screen and (max-width: 768px) {
-  .bloco-noticias {
-      flex-direction: column;
-  }
-
-  .video-container,
-  .content {
-      max-width: 100%;
-      margin-right: 0;
-      margin-bottom: 20px;
-  }
-
-  video {
-      width: 100%;
+  </script>
+  
+  <style>
+    .bloco-noticias {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .video-container {
+      max-width: 50%;
+      margin-right: -167px;
+      overflow: hidden;
+    }
+  
+    video {
+      width: 97%;
       height: auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .content {
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .content {
       max-width: 50%;
       text-align: justify;
-      margin-left: 200px; /* Ajusta o texto para a direita */
-      margin-top: 20px; /* Adiciona um espaço entre o vídeo e o texto */
-  }
-
-  video {
-      width: 215px;
-      height: auto;
-  }
-}
-</style>
+    }
+  
+    .reserve-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 1.3s ease;
+    }
+  
+    .reserve-button:hover {
+      background-color: #0056b3;
+    }
+  
+    @media screen and (max-width: 768px) {
+      .bloco-noticias {
+        flex-direction: column;
+      }
+  
+      .video-container,
+      .content {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+  
+      video {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    @media (min-width: 768px) {
+      .content {
+        max-width: 50%;
+        text-align: justify;
+        margin-left: 200px; /* Ajusta o texto para a direita */
+        margin-top: 20px; /* Adiciona um espaço entre o vídeo e o texto */
+      }
+  
+      video {
+        width: 215px;
+        height: auto;
+      }
+    }
+  </style>
+  
 
   <!------------------------------------------------------------------>
 </body>
