@@ -375,7 +375,7 @@
       flex: 1;
       max-width: 48%;
       height: auto;
-      padding: 15px;  
+       
     }
 
     @media only screen and (max-width: 768px) {
@@ -386,9 +386,9 @@
       }
       .img {
         flex: 1;
-        max-width: 95%;
+        max-width: 100%;
         height: auto;
-        padding: 15px;  
+       
       }
 
      .Sub{
@@ -482,6 +482,8 @@
 }
 */
 /* Estilos para PCs */
+
+
 @media (min-width: 768px) {
   section.imagem {
       background-image: url('img/img1_large.jpeg'); /* Imagem maior para PCs */
@@ -779,6 +781,106 @@ img {
     });
   </script>
   <!------------------------------------------------------------------>
+ 
+  <!------------------------------------------------------------------>
+ 
+  <section class="bloco-noticias">
+    <div class="video-container">
+      <video id="meuVideo" playsinline loop controls>
+        <source src="midia/Eulalia.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento video.
+      </video>
+    </div>
+    <div class="content">
+      <h2 class="dica">Como a fisioterapia pode ajudar seu filho quando ele está gripado ou resfriado</h2> <br>
+      <p class="description ellipsis"></p>
+      <p class="full-text" style="padding: 20px;">
+        A fisioterapia respiratória é uma aliada importante no tratamento de crianças com gripes ou resfriados. Ela ajuda a melhorar a ventilação pulmonar, remover secreções e aliviar os sintomas respiratórios.<br>
+        <br>
+        Os exercícios respiratórios e técnicas de fisioterapia podem facilitar a respiração, prevenir complicações como pneumonias e contribuir para a recuperação mais rápida e confortável da criança.<br>
+        <br>
+        Consulte um fisioterapeuta especializado para saber mais sobre como a fisioterapia pode beneficiar seu filho durante episódios de gripe ou resfriado.
+      </p>
+    </div>
+  </section>
+  
+  <script>
+    const meuVideo = document.getElementById('meuVideo');
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          meuVideo.play();
+        } else {
+          meuVideo.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+  
+    observer.observe(meuVideo);
+  </script>
+  
+  <style>
+    .bloco-noticias {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .video-container {
+      max-width: 50%;
+      margin-right: -167px;
+      overflow: hidden;
+    }
+  
+    video {
+      width: 97%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .content {
+      max-width: 50%;
+      text-align: justify;
+    }
+  
+   
+  
+    @media screen and (max-width: 768px) {
+      .bloco-noticias {
+        flex-direction: column;
+      }
+  
+      .video-container,
+      .content {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+  
+      video {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    @media (min-width: 768px) {
+      .content {
+        max-width: 50%;
+        text-align: justify;
+        margin-left: 200px; /* Ajusta o texto para a direita */
+        margin-top: 20px; /* Adiciona um espaço entre o vídeo e o texto */
+      }
+  
+      video {
+        width: 215px;
+        height: auto;
+      }
+    }
+  </style>
+  
+  <!------------------------------------------------------------------>
   <style>
     section {
       position: relative;
@@ -853,14 +955,16 @@ img {
 }
 
 </style>
+
   <hr class="linha-horizontal">
   <picture class="midia">
     <source media="(max-width: 600px)" srcset="img/img.jpg" type="image/png">
     <img src="img/img002.jpg" alt="image flexivel">
-    
   </picture>
-  
   <hr class="linha-horizontal">
+  <button class="reserve-button"><h2>Agende já</h2></button>
+  
+ 
   <style>
     
   
@@ -874,6 +978,33 @@ img {
       position: relative;
       }
     */
+
+    .imagem {
+      position: relative; /* Define a posição relativa para permitir o posicionamento absoluto do botão */
+      height: 400px; /* Defina a altura desejada para a seção */
+    }
+    .button > h2{
+      font-size: 10px;
+    }
+    button {
+      position: relative;
+      top: 61%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 47px;
+      background-color: #007bffc7;
+      color: #fff;
+      border: none;
+      border-radius: 84px 0px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      top: -120px;
+      box-shadow: inset -1px 0px 20px 0px #ffffff;
+    }
+    
+    .reserve-button:hover {
+      background-color: #0056b3;
+    }
     section.imagem{
       color: white;
       box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.562);
@@ -923,115 +1054,6 @@ img {
 
   
   </style>
-  <!------------------------------------------------------------------>
- 
-  <section class="bloco-noticias">
-    <div class="video-container">
-      <video id="meuVideo" playsinline loop controls>
-        <source src="midia/Eulalia.mp4" type="video/mp4">
-        Seu navegador não suporta o elemento video.
-      </video>
-    </div>
-    <div class="content">
-      <h2 class="dica">Como a fisioterapia pode ajudar seu filho quando ele está gripado ou resfriado</h2> <br>
-      <p class="description ellipsis"></p>
-      <p class="full-text" style="padding: 20px;">
-        A fisioterapia respiratória é uma aliada importante no tratamento de crianças com gripes ou resfriados. Ela ajuda a melhorar a ventilação pulmonar, remover secreções e aliviar os sintomas respiratórios.<br>
-        <br>
-        Os exercícios respiratórios e técnicas de fisioterapia podem facilitar a respiração, prevenir complicações como pneumonias e contribuir para a recuperação mais rápida e confortável da criança.<br>
-        <br>
-        Consulte um fisioterapeuta especializado para saber mais sobre como a fisioterapia pode beneficiar seu filho durante episódios de gripe ou resfriado.
-      </p>
-    </div>
-  </section>
-  
-  <script>
-    const meuVideo = document.getElementById('meuVideo');
-  
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          meuVideo.play();
-        } else {
-          meuVideo.pause();
-        }
-      });
-    }, { threshold: 0.5 });
-  
-    observer.observe(meuVideo);
-  </script>
-  
-  <style>
-    .bloco-noticias {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .video-container {
-      max-width: 50%;
-      margin-right: -167px;
-      overflow: hidden;
-    }
-  
-    video {
-      width: 97%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-  
-    .content {
-      max-width: 50%;
-      text-align: justify;
-    }
-  
-    .reserve-button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 1.3s ease;
-    }
-  
-    .reserve-button:hover {
-      background-color: #0056b3;
-    }
-  
-    @media screen and (max-width: 768px) {
-      .bloco-noticias {
-        flex-direction: column;
-      }
-  
-      .video-container,
-      .content {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-      }
-  
-      video {
-        width: 100%;
-        height: auto;
-      }
-    }
-  
-    @media (min-width: 768px) {
-      .content {
-        max-width: 50%;
-        text-align: justify;
-        margin-left: 200px; /* Ajusta o texto para a direita */
-        margin-top: 20px; /* Adiciona um espaço entre o vídeo e o texto */
-      }
-  
-      video {
-        width: 215px;
-        height: auto;
-      }
-    }
-  </style>
-  
 
   <!------------------------------------------------------------------>
 </body>
