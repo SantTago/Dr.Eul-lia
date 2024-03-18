@@ -348,6 +348,9 @@
       color: white;
       padding: 10px;
     }
+    .header-menu a:hover{
+      color: #FFCA09;
+    }
     .agendar{
       width: 50px;
       height: 100px;
@@ -432,7 +435,7 @@
   <div class="sidebar" id="sidebar">
     <a href="#" onclick="showSection('Dr.Eulalia')">Inicio</a>
     <a href="contato.html" onclick="showSection('Dr.Eulalia')">Contato</a>
-    <a href="#" onclick="showSection('Dr.Eulalia')">Agendamento</a>
+    <a href="agendamentos.html" onclick="showSection('Dr.Eulalia')">Agendamento</a>
     <a href="#" onclick="showSection('Dr.Eulalia')">Serviços</a>
     <a href="#" class="close-btn" onclick="closeMenu()">&larr; Fechar</a>
   </div>
@@ -444,12 +447,14 @@
     </div>
 
 
-    <div class="agende" id="botao">Agende agora</div>
+    
+      <div class="agende" id="botao" ><a href="agendamentos.html" style="text-decoration: none; color: white;">Agende agora</a></div>
+    
   
     <nav class="header-menu">
       <a href="#" onclick="showSection('Dr.Eulalia')">Inicio</a>
       <a href="contato.html" onclick="showSection('Dr.Eulalia')">Contato</a>
-      <a href="#" onclick="showSection('Dr.Eulalia')">Agendamento</a>
+      <a href="agendamentos.html">Agendamento</a>
       <a href="#" onclick="showSection('Dr.Eulalia')">Serviços</a>
     </nav>
   </header>
@@ -719,11 +724,17 @@ img {
 <body>
   <div class="container">
     <div class="info-container">
-      <h2>Tire suas dúvidas enviando uma mensagem</h2>
-      <p><strong>Endereço:</strong> Rua Riachuelo, 1668, Centro<br>
-      Clinica Centro Médico de Camocim<br>
-      Em frente a multiclinica<br>
-      Próximo ao posto Siena II</p>
+      <h2 style="text-align: center;">Tire suas dúvidas enviando uma mensagem</h2>
+      <p style="text-align: center;">
+        É importante enviar suas dúvidas a uma 
+        <strong>
+          fisioterapeuta infantil
+          qualificada
+        </strong> para obter orientação precisa sobre o desenvolvimento <br>
+        motor e funcional das crianças, promovendo assim um crescimento <br>
+        saudável e um futuro mais pleno para elas. <br>
+
+        </p>
     </div>
 
     <div class="contact-form">
@@ -968,7 +979,7 @@ img {
     <img src="img/img002.jpg" alt="image flexivel">
   </picture>
   <hr class="linha-horizontal">
-  <button class="reserve-button" id="agende"><h2>Agende já</h2></button>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSekeYex3az_HMFC1IoZXFAFvM6TelR64RRddzZnm9UTz-VZGw/viewform"><button class="reserve-button" id="agende"><h2>Agende já</h2></button></a>
   
  
   <style>

@@ -349,9 +349,9 @@
       padding: 10px;
     }
     .header-menu a:hover{
-      color: #FFCA09;
-    }
-    
+        color: #FFCA09;
+      }
+
     .agendar{
       width: 50px;
       height: 100px;
@@ -468,7 +468,7 @@
   <div class="sidebar" id="sidebar">
     <a href="index.html" onclick="showSection('Dr.Eulalia')">Inicio</a>
     <a href="contato.html" onclick="showSection('Dr.Eulalia')">Contato</a>
-    <a href="agendamentos.html" onclick="showSection('Dr.Eulalia')">Agendamento</a>
+    <a href="#" onclick="showSection('Dr.Eulalia')">Agendamento</a>
     <a href="#" onclick="showSection('Dr.Eulalia')">Serviços</a>
     <a href="#" class="close-btn" onclick="closeMenu()">&larr; Fechar</a>
   </div>
@@ -479,102 +479,40 @@
       <img src="img/header.png" alt="Eulalia">
     </div>
 
-
-
     <div class="agende" id="botao" ><a href="agendamentos.html" style="text-decoration: none; color: white;">Agende agora</a></div>
-  
+
     <nav class="header-menu">
       <a href="index.html" onclick="showSection('Dr.Eulalia')">Inicio</a>
       <a href="contato.html" onclick="showSection('Dr.Eulalia')">Contato</a>
-      <a href="agendamentos.html">Agendamento</a>
+      <a href="#" onclick="showSection('Dr.Eulalia')">Agendamento</a>
       <a href="#" onclick="showSection('Dr.Eulalia')">Serviços</a>
     </nav>
   </header>
 
   <!----------------------------------->
-  <div class="container1">
-    <img src="img/contato/banner.jpg" alt="Imagem" class="img">
-   
-    <div class="article">
-      <div class="contact-form">
-        <h2 style=" text-align: center;">Entre em Contato Conosco</h2>
-        <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
-          <input type="text" name="Nome" placeholder="Seu Nome" required><br>
-          <input type="email" name="Email" placeholder="Seu Email" required><br>
-          <input type="text" name="Assunto" placeholder="Assunto" required><br>
-          <textarea name="Mensagem" placeholder="Sua Mensagem" rows="4" required></textarea><br>
-          <input type="submit" value="Enviar">
-        </form>
-      </div>
-  
-    </div>
-  </div>
-
-  <hr class="linha-horizontal">
-<!----------------------------------------------------------------->
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .contact-footer {
-    background-color: #f2f2f2;
-    padding: 30px 20px;
-    text-align: center;
-  }
-  
-  .contact-info {
-    margin-bottom: 30px;
-  }
-  
-  .contact-info h2 {
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .contact-info p {
-    margin: 5px 0;
-    color: #555;
-  }
-  
-  .contact-info strong {
-    color: #000;
-  }
-  
-  .whatsapp-link {
-    color: #25D366; /* Cor do WhatsApp */
-    text-decoration: none;
-    margin-left: 5px;
-  }
-  
-  .whatsapp-link:hover {
-    text-decoration: underline;
-  }
+  <style>
+    
+    .responsive-iframe-container {
+        position: relative;
+        width: 100%;
+        height: 430vh; /* Altura igual à altura da janela do navegador */
+        overflow: hidden; /* Esconde a barra de rolagem do contêiner do iframe */
+    }
+    .responsive-iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
 </style>
 
-<footer class="contact-footer">
-  <div class="contact-info">
-    <h2>Entre em Contato</h2>
-    <p>Se você deseja agendar uma consulta ou tem alguma dúvida, entre em contato conosco. Estamos aqui para ajudar!</p>
-    <p><strong>Telefone:</strong> <a href="https://wa.me/5588992901543" class="whatsapp-link">(88)9.9290-1543 (WhatsApp)</a></p>
-    <p><strong>Email:</strong> seuemail@exemplo.com</p>
-  </div>
+<div class="responsive-iframe-container">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSekeYex3az_HMFC1IoZXFAFvM6TelR64RRddzZnm9UTz-VZGw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Carregando…</iframe>
+</div>
 
-  <div class="additional-info">
-    <div class="info-item">
-      <p>Fisioterapeuta Infantil</p>
-    </div>
-    <div class="info-item">
-      <p>Camocim - CE</p>
-    </div>
-  </div>
-</footer>
-  
-  <!----------------------------------------------------------------->
-
-  <!-- Scripts JavaScript -->
+  <!--------------------------------------------->
   <script>
     var menuAberto = false;
 
@@ -612,8 +550,5 @@
       headerMenu.classList.toggle('menu-opened');
     });
   </script>
-
-  <!--------------------------------------------->
-  
 </body>
 </html>
