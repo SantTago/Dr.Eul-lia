@@ -438,22 +438,83 @@
       <div class="agende" id="botao" ><a href="agendamentos.html" style="text-decoration: none; color: white;">Agende agora</a></div>
   </header>
 
-  <!-- Conteúdo principal -->
-  <div class="container">
-    <img src="img/perfil.jpeg" alt="Imagem" class="img">
- 
-    <div class="article">
-      <h2 class="Sub">Dr.Eulalia Angelim</h2> <br>
-      <p>Olá, sou Eulalia Angelim, fisioterapeuta especializada em fisioterapia infantil. Minha missão é ajudar crianças a se desenvolverem com saúde e bem-estar, garantindo que alcancem todo o seu potencial. Com mais de 10 anos de experiência tratando e estimulando crianças, estou comprometida em proporcionar um cuidado personalizado e eficaz para cada pequeno paciente que atendo.</p> <br>
-      <br>
-      <p>Acredito que cada criança é única e merece um tratamento específico para suas necessidades. Utilizo técnicas e metodologias atualizadas, sempre buscando o melhor resultado para o desenvolvimento Neuropsicomotor, cognitivo e emocional de cada criança que acompanho.</p> <br>
-      <br>
-      <p>Minha abordagem é pautada no carinho, na empatia e na dedicação, criando um ambiente acolhedor e seguro para que as crianças se sintam confortáveis durante as sessões de fisioterapia. Trabalho em parceria com as famílias, orientando e apoiando para que juntos possamos promover o melhor para o crescimento saudável das crianças.</p> <br>
-      <br>
-
-      <p>Se você busca um profissional comprometida, experiente e apaixonado por cuidar das crianças, estou aqui para ajudar. Vamos juntos garantir o melhor para o desenvolvimento e a qualidade de vida dos pequenos!</p>
-    </div>
+  <div style="background-color: #0077ff;color: white;">
+    Aqui vou colocar as redes socais redes sociais e Email
   </div>
+  <!------------------------------------------------------------->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos CSS personalizados */
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding-right: 0px;
+      padding-left: 0px;
+      
+    }
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+     
+    }
+    .article {
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    .article {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+ 
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/perfil.jpeg" class="d-block w-100" alt="Imagem 1">
+      </div>
+      <div class="carousel-item">
+        <img src="img/perfil.jpeg" class="d-block w-100" alt="Imagem 2">
+      </div>
+      <div class="carousel-item">
+        <img src="img/perfil.jpeg" class="d-block w-100" alt="Imagem 3">
+      </div>
+    </div>
+    <!--
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
+  </div>-->
+
+  <div class="article">
+    <p>Olá, sou Eulalia Angelim, fisioterapeuta especializada em fisioterapia infantil. Minha missão é ajudar crianças a se desenvolverem com saúde e bem-estar, garantindo que alcancem todo o seu potencial. Com mais de 10 anos de experiência tratando e estimulando crianças, estou comprometida em proporcionar um cuidado personalizado e eficaz para cada pequeno paciente que atendo.</p>
+    <p>Acredito que cada criança é única e merece um tratamento específico para suas necessidades. Utilizo técnicas e metodologias atualizadas, sempre buscando o melhor resultado para o desenvolvimento Neuropsicomotor, cognitivo e emocional de cada criança que acompanho.</p>
+    <p>Minha abordagem é pautada no carinho, na empatia e na dedicação, criando um ambiente acolhedor e seguro para que as crianças se sintam confortáveis durante as sessões de fisioterapia. Trabalho em parceria com as famílias, orientando e apoiando para que juntos possamos promover o melhor para o crescimento saudável das crianças.</p>
+    <p>Se você busca um profissional comprometida, experiente e apaixonado por cuidar das crianças, estou aqui para ajudar. Vamos juntos garantir o melhor para o desenvolvimento e a qualidade de vida dos pequenos!</p>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.carousel').carousel({
+      interval: 3000 
+    });
+  }); 
+</script>
+
   <!------------------------------------------------------------->
  
 <picture class="midia">
