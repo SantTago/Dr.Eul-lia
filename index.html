@@ -543,13 +543,14 @@
  <style>
    /* Efeito hover nos ícones */
    .fab:hover {
-     color: #d9d9d9; /* Cor do ícone ao passar o mouse */
+     color: #f9fd00; /* Cor do ícone ao passar o mouse */
      transition: color 0.3s ease; /* Transição suave de cor */
    }
  
    /* Estilos dos ícones */
    .social-icon {
      margin-right: 10px; /* Espaçamento entre os ícones */
+     padding: 10px;
    }
  
    /* Estilos do contêiner dos ícones */
@@ -562,6 +563,8 @@
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
+    flex-wrap: nowrap;
+    
    }
  
    /* Estilos do contêiner dos ícones para telas menores */
@@ -777,9 +780,42 @@ img {
   </script>
   </div>
 
-  <hr class="linha-horizontal">
+
 
   <!--------------------------------------------------------------->
+
+  <style>
+     .social-icons-container1 {
+      background-color: #C00A83;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    margin-bottom: 11px;
+   }
+
+   .social-icons-container2 {
+    background-color: #C00A83;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    
+   }
+
+  </style>
+
+  <div class="social-icons-container1">
+    <h2>Serviços</h2>
+  </div>
 
   <section class="slider">
     
@@ -823,6 +859,9 @@ img {
       <img src="img/011.jpg" alt="bebe"> 
     </div>
   </section>
+
+  <div class="social-icons-container2">
+  </div>
  
   <!-- Adicione este script após a tag <body> -->
 <script>
@@ -867,22 +906,16 @@ img {
       flex-wrap: wrap;
     }
 
+
     .info-container {
       background-color: #3498db;
       padding: 48px;
       color: #fff;
       flex: -1;
+         
     }
 
-    .info-container h2 {
-      margin-top: 0;
-      font-size: 24px;
-    }
-
-    .info-container p {
-      margin: 10px 0;
-    }
-
+  
     .contact-form {
       background-color: #f2f2f2; /* Cor de fundo cinza claro */
       padding: 20px;
@@ -893,11 +926,12 @@ img {
     .contact-form h2 {
       margin-top: 0;
       font-size: 24px;
+      
     }
 
     .contact-form input,
     .contact-form textarea {
-      width: 100%;
+      width: 89%;
       padding: 8px;
       margin-bottom: 10px;
       border: 1px solid #ccc;
@@ -924,14 +958,25 @@ img {
       .contact-form {
         margin-left: 0;
         margin-top: 20px;
+        width: 100%;
       }
+
+      .info-container {
+        background-color: #3498db;
+        padding: 48px;
+        color: #fff;
+        flex: -1;
+        margin-top: -15px;
+        margin-bottom: -21px;
+
+      }
+      
     }
   </style>
-</head>
-<body>
-  <div class="container">
+
+  <div class="container1">
     <div class="info-container">
-      <h2 style="text-align: center;">Tire suas dúvidas enviando uma mensagem</h2>
+      <h2 style="text-align: center; padding: 10px;">Tire suas dúvidas enviando uma mensagem</h2>
       <p style="text-align: center;">
         É importante enviar suas dúvidas a uma 
         <strong>
@@ -956,6 +1001,27 @@ img {
     </div>
   </div>
   <!--------------------------------------------------->
+
+  <style>
+     .social-icons-container3 {
+      background-color: #007bff;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+
+   }
+
+  </style>
+
+  <div class="social-icons-container3">
+    <h2>Atendimento Comercial, Residencial e On-lne</h2>
+  </div>
+
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127510.57928998859!2d-40.92992596926825!3d-2.900904005038739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ebdb8021008ef9%3A0xb3d7b1a25595a20a!2sCentro%20M%C3%A9dico%20de%20Camocim!5e0!3m2!1spt-BR!2sbr!4v1710468985124!5m2!1spt-BR!2sbr" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   <!---------------------------------------------------------------->
   <!-- JavaScript -->
