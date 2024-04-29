@@ -492,86 +492,197 @@
   </header>
 
   <!----------------------------------->
-  <div class="container1">
-    <img src="img/contato/banner.jpg" alt="Imagem" class="img">
-   
-    <div class="article">
-      <div class="contact-form">
-        <h2 style=" text-align: center;">Entre em Contato Conosco</h2>
-        <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
-          <input type="text" name="Nome" placeholder="Seu Nome" required><br>
-          <input type="email" name="Email" placeholder="Seu Email" required><br>
-          <input type="text" name="Assunto" placeholder="Assunto" required><br>
-          <textarea name="Mensagem" placeholder="Sua Mensagem" rows="4" required></textarea><br>
-          <input type="submit" value="Enviar">
-        </form>
-      </div>
-  
-    </div>
-  </div>
-
+    <style>
+      .social-icons-container1 {
+        background-color: #C00A83;
+        color: white;
+        padding: 7px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+        flex-wrap: nowrap;
+        margin-bottom: 11px;
+        margin-top: -10px;
+      }
+  </style>
   <hr class="linha-horizontal">
+
+  <div class="social-icons-container1">
+    <h2>Serviços</h2>
+  </div>
 <!----------------------------------------------------------------->
+
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .contact-footer {
-    background-color: #f2f2f2;
-    padding: 30px 20px;
-    text-align: center;
-  }
-  
-  .contact-info {
-    margin-bottom: 30px;
-  }
-  
-  .contact-info h2 {
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .contact-info p {
-    margin: 5px 0;
-    color: #555;
-  }
-  
-  .contact-info strong {
-    color: #000;
-  }
-  
-  .whatsapp-link {
-    color: #25D366; /* Cor do WhatsApp */
-    text-decoration: none;
-    margin-left: 5px;
-  }
-  
-  .whatsapp-link:hover {
-    text-decoration: underline;
-  }
-</style>
+  .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
 
-<footer class="contact-footer">
-  <div class="contact-info">
-    <h2>Entre em Contato</h2>
-    <p>Se você deseja agendar uma consulta ou tem alguma dúvida, entre em contato conosco. Estamos aqui para ajudar!</p>
-    <p><strong>Telefone:</strong> <a href="https://wa.me/5588992901543" class="whatsapp-link">(88)9.9290-1543 (WhatsApp)</a></p>
-    <p><strong>Email:</strong> seuemail@exemplo.com</p>
+    .box {
+      flex: 0 0 calc(30% - 20px);
+      padding: 10PX;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .box img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      margin-bottom: 20px;
+    }
+
+    .show-more {
+      display: none;
+    }
+
+    .show-btn {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .show-btn:hover {
+      background-color: #2980b9;
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        flex-basis: calc(50% - 20px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Div 1 -->
+    <div class="box">
+      <img src="img/002.jpeg" alt="Imagem 1">
+      <p>Informações sobre a imagem 1</p>
+      <div class="show-more">
+        <p>Detalhes adicionais sobre a imagem 1.</p>
+      </div>
+      <button class="show-btn" onclick="toggleContent(this)">Mostrar Mais</button>
+    </div>
+
+    <!-- Div 2 -->
+    <div class="box">
+      <img src="img/003.jpeg" alt="Imagem 2">
+      <p>Informações sobre a imagem 2</p>
+      <div class="show-more">
+        <p>Detalhes adicionais sobre a imagem 2.</p>
+      </div>
+      <button class="show-btn" onclick="toggleContent(this)">Mostrar Mais</button>
+    </div>
+
+    <!-- Div 3 -->
+    <div class="box">
+      <img src="img/004.jpeg" alt="Imagem 3">
+      <p>Informações sobre a imagem 3</p>
+      <div class="show-more">
+        <p>Detalhes adicionais sobre a imagem 3.</p>
+      </div>
+      <button class="show-btn" onclick="toggleContent(this)">Mostrar Mais</button>
+    </div>
+
+    <!-- Div 4 -->
+    <div class="box">
+      <img src="img/005.jpeg" alt="Imagem 4">
+      <p>Informações sobre a imagem 4</p>
+      <div class="show-more">
+        <p>Detalhes adicionais sobre a imagem 4.</p>
+      </div>
+      <button class="show-btn" onclick="toggleContent(this)">Mostrar Mais</button>
+    </div>
+
+    <!-- Div 5 -->
+    <div class="box">
+      <img src="img/006.jpeg" alt="Imagem 5">
+      <p>Informações sobre a imagem 5</p>
+      <div class="show-more">
+        <p>Detalhes adicionais sobre a imagem 5.</p>
+      </div>
+      <button class="show-btn" onclick="toggleContent(this)">Mostrar Mais</button>
+    </div>
+
+    <!-- Div 6 -->
+    <div class="box">
+      <img src="img/007.jpg" alt="Imagem 6">
+      <p>Informações sobre a imagem 6</p>
+      <div class="show-more">
+        <p>Detalhes adicionais sobre a imagem 6.</p>
+      </div>
+      <button class="show-btn" onclick="toggleContent(this)">Mostrar Mais</button>
+    </div>
+
+    <!-- Div 7 -->
+    <div class="box">
+      <img src="img/008.jpg" alt="Imagem 7">
+      <p>Informações sobre a imagem 7</p>
+      <div class="show-more">
+        <p>Detalhes adicionais sobre a imagem 7.</p>
+      </div>
+      <button class="show-btn" onclick="toggleContent(this)">Mostrar Mais</button>
+    </div>
+
+    <!-- Div 8 -->
+    <div class="box">
+      <img src="img/009.jpg" alt="Imagem 8">
+      <p>Informações sobre a imagem 8</p>
+      <div class="show-more">
+        <p>Detalhes adicionais sobre a imagem 8.</p>
+      </div>
+      <button class="show-btn" onclick="toggleContent(this)">Mostrar Mais</button>
+    </div>
+
+    <!-- Div 9 -->
+    <div class="box">
+      <img src="img/010.jpg" alt="Imagem 9">
+      <p>Informações sobre a imagem 9</p>
+      <div class="show-more">
+        <p>Detalhes adicionais sobre a imagem 9.</p>
+      </div>
+      <button class="show-btn" onclick="toggleContent(this)">Mostrar Mais</button>
+    </div>
+
+    <!-- Div 10 -->
+    <div class="box">
+      <img src="img/011.jpg" alt="Imagem 10">
+      <p>Informações sobre a imagem 10</p>
+      <div class="show-more">
+        <p>Detalhes adicionais sobre a imagem 10.</p>
+      </div>
+      <button class="show-btn" onclick="toggleContent(this)">Mostrar Mais</button>
+    </div>
   </div>
 
-  <div class="additional-info">
-    <div class="info-item">
-      <p>Fisioterapeuta Infantil</p>
-    </div>
-    <div class="info-item">
-      <p>Camocim - CE</p>
-    </div>
-  </div>
-</footer>
-  
+  <script>
+    function toggleContent(button) {
+      var box = button.parentNode;
+      var showMore = box.querySelector(".show-more");
+
+      if (showMore.style.display === "none" || showMore.style.display === "") {
+        showMore.style.display = "block";
+        button.textContent = "Mostrar Menos";
+      } else {
+        showMore.style.display = "none";
+        button.textContent = "Mostrar Mais";
+      }
+    }
+  </script>
+
   <!----------------------------------------------------------------->
 
   <!-- Scripts JavaScript -->
@@ -612,6 +723,60 @@
       headerMenu.classList.toggle('menu-opened');
     });
   </script>
+
+  <!------------------------------------------------------------------>
+  <style>
+    /* Estilos do footer */
+    footer {
+      background-color: #3498db;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 14px;
+      width: 100%;
+    }
+  
+    footer p {
+      margin: 5px 0;
+    }
+  
+    /* Estilização do link */
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+  
+    footer a:hover {
+      text-decoration: underline;
+    }
+  
+    /* Estilos para tornar o footer responsivo */
+    @media (max-width: 768px) {
+      footer div {
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+  </head>
+  <body>
+    <!-- Conteúdo da página aqui -->
+  
+    <footer>
+      <div>
+        <p>Entre em contato:</p>
+        <p>Telefone: (XX) XXXX-XXXX</p>
+        <p>Email: contato@fisioterapiainfantil.com</p>
+      </div>
+      <div>
+        <p>Siga-nos nas redes sociais:</p>
+        <p>
+          <a href="#" target="_blank">Facebook</a> |
+          <a href="#" target="_blank">Instagram</a> |
+          <a href="#" target="_blank">Twitter</a>
+        </p>
+      </div>
+      <p>&copy; 2024 Fisioterapia Infantil. Todos os direitos reservados.</p>
+    </footer>
 
   <!--------------------------------------------->
   
