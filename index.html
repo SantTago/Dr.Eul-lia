@@ -33,7 +33,7 @@
     /* Estilos para o cabeçalho */
     .logomarca {
       background-color: #C00A83;
-      padding: 13px;
+      padding: 19px;
       text-align: center;
       margin-bottom: -1px;
       display: flex;
@@ -426,9 +426,29 @@
       border-top: 5px solid #FFCA09;
      
   }
+ 
+  </style>
   </style>
 </head>
 <body>
+  
+  <style>
+    #numero {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center;
+        margin: auto;
+    }
+    .contator{
+      background-color: #c00a83;
+      text-align: center;
+      color: white;
+    }
+  </style>
+  
+  <p class="contator">Visitantes <span id="numero">Carregando...</span></p>
+  
 
   <!-- Sidebar -->
   <div class="sidebar" id="sidebar">
@@ -505,6 +525,7 @@
         }
       }
     </style>
+    
     
     <div class="article" id="article1">
       <div>
@@ -1434,5 +1455,82 @@ img {
       <p>&copy; 2024 Fisioterapia Infantil. Todos os direitos reservados.</p>
     </footer>
 
+    <!----------contator -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+      import { getDatabase, ref, onValue, set, get, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-database.js";
+
+      // Your web app's Firebase configuration for the new database
+      const firebaseConfig = {
+          apiKey: "AIzaSyBsqRF9jiJ9Kk4zrrJN5eVvcjtQgktazB0",
+          authDomain: "lounge-23e37.firebaseapp.com",
+          databaseURL: "https://lounge-23e37-default-rtdb.firebaseio.com",
+          projectId: "lounge-23e37",
+          storageBucket: "lounge-23e37.appspot.com",
+          messagingSenderId: "1023282040833",
+          appId: "1:1023282040833:web:d1f8f82f42b4055979f000"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const numeroRef = ref(database, 'numeroAtual');
+
+      // Função para atualizar o número na página
+      function atualizarNumero(numero) {
+          document.getElementById('numero').innerText = numero;
+      }
+
+      // Função para iniciar a contagem
+      function iniciarContagem() {
+          get(numeroRef).then((snapshot) => {
+              if (snapshot.exists()) {
+                  atualizarNumero(snapshot.val());
+              } else {
+                  set(numeroRef, 0); // Defina o número inicial aqui
+              }
+          });
+
+          // Ouvir atualizações em tempo real
+          onValue(numeroRef, (snapshot) => {
+              if (snapshot.exists()) {
+                  atualizarNumero(snapshot.val());
+              }
+          });
+      }
+
+      // Função para incrementar o número ao carregar a página
+      function incrementarNumeroAoCarregarPagina() {
+          runTransaction(numeroRef, (numeroAtual) => {
+              return (numeroAtual || 0) + 1; // Incrementa o número atual em 1
+          });
+      }
+
+      // Função para incrementar o número a cada 25 segundos
+      function atualizarNumeroAutomaticamente() {
+          setInterval(() => {
+              runTransaction(numeroRef, (numeroAtual) => {
+                  return (numeroAtual || 0) + 1; // Incrementa o número atual em 1
+              });
+          }, 555525000); // Intervalo em milissegundos
+      }
+
+      // Função para mostrar "Carregando..." por 3 segundos
+      function mostrarCarregando() {
+          const numeroElem = document.getElementById('numero');
+          numeroElem.innerText = 'Carregando...';
+          setTimeout(() => {
+              iniciarContagem();
+              incrementarNumeroAoCarregarPagina();
+              atualizarNumeroAutomaticamente();
+          }, 3000); // 3 segundos
+      }
+
+      // Chamar as funções quando a página carrega
+      document.addEventListener('DOMContentLoaded', () => {
+          mostrarCarregando();
+      });
+  </script>
 </body>
 </html>
