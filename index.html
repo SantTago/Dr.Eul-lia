@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Dr.Eulalia</title>
+  <title>Dr.Eulalia Angelin</title>
   <link rel="icon" href="caminho/para/seu-favicon.ico" type="image/x-icon">
 
 
@@ -447,14 +447,15 @@
     }
   </style>
   
+  <!--
   <p class="contator">Visitantes <span id="numero">Carregando...</span></p>
-  
+-->
 
   <!-- Sidebar -->
   <div class="sidebar" id="sidebar">
     <a href="#" onclick="showSection('Dr.Eulalia')">Inicio</a>
-    <a href="contato.html" onclick="showSection('Dr.Eulalia')">Contato</a>
-    <a href="agendamentos.html" onclick="showSection('Dr.Eulalia')">Agendamento</a>
+    <a href="https://wa.me/5588992901543" onclick="showSection('Dr.Eulalia')">Contato</a>
+    <a href="https://wa.me/5588992008850" onclick="showSection('Dr.Eulalia')">Agendamento</a>
     <a href="serviços.html" onclick="showSection('Dr.Eulalia')">Serviços</a>
     <a href="#" class="close-btn" onclick="closeMenu()">&larr; Fechar</a>
   </div>
@@ -468,13 +469,13 @@
 
 
     
-      <div class="agende" id="botao" ><a href="agendamentos.html" style="text-decoration: none; color: white; margin-bottom: -49px;" >Agende agora</a></div>
+      <div class="agende" id="botao" ><a href="https://wa.me/5588992008850" style="text-decoration: none; color: white; margin-bottom: -49px;" >Agende agora</a></div>
     
   
     <nav class="header-menu">
       <a href="#" onclick="showSection('Dr.Eulalia')">Inicio</a>
-      <a href="contato.html" onclick="showSection('Dr.Eulalia')">Contato</a>
-      <a href="agendamentos.html">Agendamento</a>
+      <a href="https://wa.me/5588992901543" onclick="showSection('Dr.Eulalia')">Contato</a>
+      <a href="https://wa.me/5588992008850">Agendamento</a>
       <a href="serviços.html" onclick="showSection('Dr.Eulalia')">Serviços</a>
     </nav>
   </header>
@@ -1038,7 +1039,7 @@ img {
 
     <div class="contact-form">
       <h2>Envie sua mensagem</h2>
-      <form action="mailto:mocobom09@gmail.com" method="post" enctype="text/plain">
+      <form action="mailto:eulaliangeliam@gmail.com" method="post" enctype="text/plain">
         <input type="text" name="Nome" placeholder="Nome" required><br>
         <input type="email" name="Email" placeholder="Email" required><br>
         <input type="text" name="Assunto" placeholder="Assunto" required><br>
@@ -1302,7 +1303,7 @@ img {
     <img src="img/img002.jpg" alt="image flexivel">
   </picture>
   <hr class="linha-horizontal">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSekeYex3az_HMFC1IoZXFAFvM6TelR64RRddzZnm9UTz-VZGw/viewform"><button class="reserve-button" id="agende"><h2>Agende já</h2></button></a>
+  <a href="https://wa.me/5588992008850"><button class="reserve-button" id="agende"><h2>Agende já</h2></button></a>
   
  
   <style>
@@ -1433,6 +1434,7 @@ img {
         margin-bottom: 15px;
       }
     }
+    
   </style>
   </head>
   <body>
@@ -1532,5 +1534,51 @@ img {
           mostrarCarregando();
       });
   </script>
+
+
+<style>
+  /* Estilos para o botão flutuante */
+  .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      z-index: 1000;
+      animation: pulse 1.5s infinite; /* Animação de pulsação */
+  }
+
+  .whatsapp-button img {
+      width: 35px;
+      height: 35px;
+      transition: transform 0.3s ease;
+  }
+
+  /* Animação de pulsação */
+  @keyframes pulse {
+      0% {
+          transform: scale(1);
+      }
+      50% {
+          transform: scale(1.1);
+      }
+      100% {
+          transform: scale(1);
+      }
+  }
+</style>  
+
+<!-- Botão flutuante do WhatsApp com ícone fixo -->
+<a href="https://wa.me/5588992901543" target="_blank" class="whatsapp-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
 </body>
 </html>
